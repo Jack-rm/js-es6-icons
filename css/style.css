@@ -1,9 +1,21 @@
+header {
+    background-color: white;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+i {
+    font-size: 50px;
+}
+
 select option {
     background: #29b1dd;
     color: #fff;
 }
 
-#selector{
+#my_selector{
     border: 1px solid black;
     border-radius: 0;
 }
@@ -26,16 +38,4 @@ select option {
 
 .my_filter-bar{
     background-color: #29b1dd;
-}
-
-header {
-    background-color: white;
-}
-
-body {
-    background-color: lightgrey;
-}
-
-i {
-    font-size: 50px;
 }
