@@ -1,0 +1,41 @@
+select option {
+    background: #29b1dd;
+    color: #fff;
+}
+
+#selector{
+    border: 1px solid black;
+    border-radius: 0;
+}
+
+#my_icon-box {
+    flex-flow: row wrap;
+}
+
+#my_title {
+    color: #29b1dd;
+}
+
+.flex-item{
+    flex: 0 0 350px;
+    border: 1px solid trasparent;
+    border-radius: 20px;
+    box-shadow: 1px 2px;
+    background-color: white;
+}
+
+.my_filter-bar{
+    background-color: #29b1dd;
+}
+
+header {
+    background-color: white;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+i {
+    font-size: 50px;
+}
