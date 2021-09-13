@@ -102,30 +102,19 @@ const icons = [
  * Milestone #1
  * Partendo dalla seguente struttura dati , mostriamo in pagina tutte le icone disponibili come da layout.
  * 
+ * 
  * Milestone #2
  * Coloriamo le icone per tipo
  * 
+ * 
  * Milestone #3
  * Creiamo una select con i tipi di icone e usiamola per filtrare le icone
+ * 
+ * - prima cosa dobbiamo generare le opzioni nella select per ogni tipo
+ * - filtrare gli elementi da visualizzare in base alla selezione [onChange].
 */
 
-
-const colors = [
-
-]
-
-/*
-* Milestone #2
-* coloriamo le icone per tipo.
-*/
-
-/*
-* Milestone #3
-* creiamo una select con i tipi di icone e usiamola per filtrare le icone.
-*
-* - prima cosa dobbiamo generare le opzioni nella select per ogni tipo
-* - filtrare gli elementi da visualizzare in base alla selezione [onChange].
-*/
+const colors = [];
 
 // prendiamo il nostro container da id
 let container = document.getElementById("my_icon-box")
@@ -138,15 +127,13 @@ container = document.querySelector(".my_icon-container");
 // stessa cosa ma di solito non si usa per il singolo
 container = document.querySelectorAll(".my_icons-container")[0];
 */
-
 console.log(container);
 
 colorizedIcons = colorizeItems(icons, colors);
 printToPage(colorizedIcons, container);
 
 const types = getUniquePropertyValues(icons, "type");
-const select = document.querySelector("#my_select");
-
+const select = document.querySelector("#my_selector");
 //aggiungo alla select selezionata le opzioni dei tipi esistenti
 addOptions(types, select);
 
@@ -157,7 +144,7 @@ select.addEventListener("change", () => {
    const selectedValue = select.value;
   
    // dichiaro ed inizializzo la lista di icone filtrata
-   const filteredIcons = filterItems(colorizedIcons, selectedValue);
+   const filteredIcons = filterItems(icons, selectedValue);
    
    //la stampo attraverso la funzione apposita
    printToPage(filteredIcons, container);
@@ -168,8 +155,6 @@ console.log(colorizeItems())
 
 //const types = getUniquePropertyValues(icons, "type");
 //console.log(types);
-
-
 
 
 
@@ -301,7 +286,7 @@ function addOptions(options, select){
 function filterItems(array, filter){
 
    // se ho selezionato al ritorno tutto l'array 
-   if (filter.trim().toLoweCase() === "all"){
+   if (filter.trim().toLowerCase() === "all"){
        return array;
    }
 
