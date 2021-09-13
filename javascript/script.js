@@ -158,7 +158,7 @@ console.log(colorizeItems())
 
 
 
-// ### FUNZIONI ###
+//----------------- ### FUNZIONI ### ----------------------
 
 /**
 * mostro in pagina all'interno del container, in html, tutti gli elementi dell'array dato 
@@ -183,7 +183,7 @@ function printToPage(array, container){
        temporaryHTML += 
        `<div class="text-center flex-item mb-5 pt-4 pb-4">
            <i class="${family} ${prefix}${name}" style="color:${color}"></i>
-           <h4 class="my_icon-title text-uppercase">${name}</h4>
+           <h4 class="my_icon-title text-uppercase pt-2">${name}</h4>
         </div>
        `
    });
@@ -237,9 +237,7 @@ function colorizeItems(array) {
    const colorizedArray = array.map((element) => {
 
        // element è l'oggetto singolo presente nell'array
-
        // types = ["blabla", "cococo", "fafafa"]
-
        // indexOfType di cococo = 2
 
        //salviamo in una variabile locale -indexOfType- l'indice dell'elemento (element.type)
@@ -256,9 +254,6 @@ function colorizeItems(array) {
 
    return colorizedArray;
 };
-
-
-// creare un oggetto <select></select> con dentro <option value=""></option>
 
 
 /**
